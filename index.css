@@ -5,7 +5,8 @@
 }
 
 body {
-    background: #fff;
+    background: url(img/img_001.jpg);
+    background-size: cover;
     height: 100%;
     font-family: 'poppins', sans-serif;
 }
@@ -13,13 +14,13 @@ body {
 .container {
     width: 200px;
     height: 400px;
-    min-width: 30%;
+    min-width: 20%;
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
-    background: gainsboro;
-    border-radius: 10px;
+    background: skyblue;
+    border-radius: 15px;
     
 }
 
@@ -30,7 +31,7 @@ body {
 
 #taskForm input {
     height: 45px;
-    width: 60%;
+    width: 75%;
     font-size: medium;
     font-weight: 500;
     padding: 8px;
@@ -64,19 +65,24 @@ body {
 #taskList {
     height: 50px;
     justify-content: space-between;
-    padding: 5px 10px;
-    background-color: ghostwhite;
-    border-radius: 5px;
+    
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     margin-bottom: 8px;
     border: 1px;
     cursor: pointer;
+
+    
+    flex-direction: column;
+    list-style-position: inside;
+    list-style-type: none;
+    gap: 12px;
 }
 
 
 h1 {
     text-align: center;
+    margin-top: 10px;
 }
 
 
@@ -88,5 +94,21 @@ h1 {
     border-radius: 7px;
     cursor: pointer;
     font-size: small;
+}
+
+.todo-item { /*Styles for a single todo item*/
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    border-radius: 10px;
+}
+
+.todo-item:hover { /*Hover effect on a todo item*/
+    background-color: white;
+}
+
+.todo-text {
+    flex: 1;
 }
 
